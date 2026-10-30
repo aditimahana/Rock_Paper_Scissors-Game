@@ -1,4 +1,3 @@
-import random
 rock = '''
     _______
 ---'   ____)
@@ -36,29 +35,29 @@ elif user_choice == 2:
     print(scissors)
 
 print("Computer's Choice:")
-computer_choice = random.randint(1, 3 )
-if computer_choice == 1:
+computer_choice = random.randint(0, 2 )
+if computer_choice == 0:
     print(rock)
-elif computer_choice == 2:
+elif computer_choice == 1:
     print(paper)
-elif computer_choice == 3:
+elif computer_choice == 2:
     print(scissors)
 
-if user_choice == 0 and computer_choice == 1:
+if user_choice == 0 and computer_choice == 0:
     print("It is a draw")
-elif user_choice == 0 and computer_choice == 2:
+elif user_choice == 0 and computer_choice == 1:
     print("You lose.")
-elif user_choice == 0 and computer_choice == 3:
+elif user_choice == 0 and computer_choice == 2:
+    print("You win!")
+elif user_choice == 1 and computer_choice == 0:
     print("You win!")
 elif user_choice == 1 and computer_choice == 1:
-    print("You win!")
-elif user_choice == 1 and computer_choice == 2:
     print("It is a draw.")
-elif user_choice == 1 and computer_choice == 3:
+elif user_choice == 1 and computer_choice == 2:
+    print("You lose.")
+elif user_choice == 2 and computer_choice == 0:
     print("You lose.")
 elif user_choice == 2 and computer_choice == 1:
-    print("You lose.")
-elif user_choice == 2 and computer_choice == 2:
     print("You win!")
-elif user_choice == 2 and computer_choice == 3:
+elif user_choice == 2 and computer_choice == 2:
     print("It is a draw.")
